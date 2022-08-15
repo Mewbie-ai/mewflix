@@ -9,13 +9,13 @@ body {
 .navbar {
   position: fixed;
   width: 100%;
-  display: none;
+  display: flex;
   z-index: 2;
   justify-content: space-between;
   align-items: center;
   background: #111;
 }
-.navbar div {
+.navbar .nav-list {
   display: flex;
 }
 .navbar div a {
@@ -27,12 +27,12 @@ body {
   color: #fff;
 }
 iframe {
-  margin-top: 50px;
   width: 100vw;
   height: 50vh;
 }
 .card {
   height: 30vh;
+  width: auto;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   margin: 10px;
   border-radius: 20px;
@@ -58,13 +58,47 @@ iframe {
   object-fit: scale-down;
   margin-right: 10px;
 }
-.nav-active {
+.nav-pc {
   display: flex;
-  background: #111;
-  color: #fff;
 }
-.burger-active {
+.nav-mobile {
   display: none;
-  background: #111;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #111;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-top: 5em;
+}
+.dropdown-content a {
   color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+}
+.show {
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+@media screen and (max-width: 768px) {
+  .burger-active {
+    display: flex;
+    background: #111;
+    color: #fff;
+  }
+  .nav-pc {
+    display: none !important;
+  }
+  .nav-mobile {
+    display: flex !important;
+  }
 }

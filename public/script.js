@@ -16,6 +16,7 @@ function getDiscover(type, header, filter, page) {
       console.log(movies);
       const h2 = document.createElement("h2");
       h2.innerHTML = header;
+      h2.classList.add("header");
       movies.forEach((movie) => {
         const card = document.createElement("div");
         card.classList.add("card");
@@ -29,67 +30,14 @@ function getDiscover(type, header, filter, page) {
     });
 }
 
+const dropdown = document.querySelector("#dropdown");
+const dropdownMenu = document.querySelector(".dropdown-content");
+dropdown.addEventListener("click", () => {
+  dropdownMenu.classList.toggle("show");
+});
+
 getDiscover(28, "Popular Movies", "&sort_by=popularity.desc", 1);
 getDiscover(11, "Horror Movies");
 getDiscover(19, "Biography Movies");
 getDiscover(18, "Best Dramas");
 getDiscover(35, "Comedy Movies");
-
-function navBurger() {
-  const burger = document.querySelector(".burger");
-  const nav = document.querySelector(".nav");
-  burger.addEventListener("click", () => {
-    nav.classList.toggle("nav-active");
-  }),
-    nav.addEventListener("click", () => {
-      nav.classList.remove("nav-active");
-    }),
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > 768) {
-        nav.classList.remove("nav-active");
-      }
-    }),
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 0) {
-        nav.classList.add("nav-active");
-      } else {
-        nav.classList.remove("nav-active");
-      }
-    }),
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 0) {
-        burger.classList.add("burger-active");
-      } else {
-        burger.classList.remove("burger-active");
-      }
-    }),
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 0) {
-        nav.classList.add("nav-active");
-      } else {
-        nav.classList.remove("nav-active");
-      }
-    }),
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 0) {
-        nav.classList.add("nav-active");
-      } else {
-        nav.classList.remove("nav-active");
-      }
-    }),
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 0) {
-        nav.classList.add("nav-active");
-      } else {
-        nav.classList.remove("nav-active");
-      }
-    }),
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 0) {
-        nav.classList.add("nav-active");
-      } else {
-        nav.class;
-      }
-    });
-}
-navBurger();
