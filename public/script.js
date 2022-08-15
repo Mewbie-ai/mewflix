@@ -37,7 +37,8 @@ dropdown.addEventListener("click", () => {
 });
 
 getDiscover(28, "Popular Movies", "&sort_by=popularity.desc", 1);
-getDiscover(11, "Horror Movies");
+getDiscover(1, "Action Movies");
+getDiscover(66, "Horror Movies");
 getDiscover(19, "Biography Movies");
 getDiscover(18, "Best Dramas");
 getDiscover(35, "Comedy Movies");

@@ -32,7 +32,6 @@ iframe {
 }
 .card {
   height: 30vh;
-  width: auto;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   margin: 10px;
   border-radius: 20px;
@@ -88,6 +87,23 @@ iframe {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #111;
+  color: #fff;
+  padding: 10px;
+  gap: 10px;
+}
+footer a {
+  color: #555;
+  text-decoration: none;
+}
+.searchTab {
+  background: transparent;
+  border: none;
+  color: #fff;
 }
 @media screen and (max-width: 768px) {
   .burger-active {
