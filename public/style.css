@@ -4,11 +4,13 @@ body {
   color: #fff;
   background-color: #111;
   margin: 0;
+  overflow-x: hidden;
 }
 .navbar {
   position: fixed;
   width: 100%;
-  display: flex;
+  display: none;
+  z-index: 2;
   justify-content: space-between;
   align-items: center;
   background: #111;
@@ -45,9 +47,24 @@ iframe {
   overflow-x: scroll;
   display: flex;
   position: relative;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+}
+.slider::-webkit-scrollbar {
+  display: none;
 }
 .logo {
   width: 100px;
   object-fit: scale-down;
   margin-right: 10px;
+}
+.nav-active {
+  display: flex;
+  background: #111;
+  color: #fff;
+}
+.burger-active {
+  display: none;
+  background: #111;
+  color: #fff;
 }
