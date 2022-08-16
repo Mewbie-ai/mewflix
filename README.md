@@ -8,3 +8,6 @@ via npm:
    npm install
 2. run on localhost
    node Server.js
+
+via online:
+open http://memary.me/mewflix/public/
