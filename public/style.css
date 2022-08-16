@@ -105,6 +105,26 @@ footer a {
   border: none;
   color: #fff;
 }
+.active {
+  display: block !important;
+}
+.home-screen {
+  display: none;
+}
+.login-screen {
+  display: none;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 80vh;
+}
+#name {
+  margin-right: 10px;
+}
 @media screen and (max-width: 768px) {
   .burger-active {
     display: flex;

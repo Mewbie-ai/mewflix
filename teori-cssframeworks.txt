@@ -1,0 +1,6 @@
+Bootstrap > Front-end Framework yang bertujuan untuk membantu pembuatan 
+website modern dan responsif dengan kode-kode yang sudah jadi.
+https://getbootstrap.com
+Tailwind > CSS Framework yang berfokus pada efisiensi, memudahkan website
+berskala besar untuk mengatur penggunaan css yang seragam dan optimal.
+https://tailwindcss.com

@@ -10,7 +10,7 @@ function getDiscover(type, header, filter, page) {
     .then((response) => response.json())
     .then((data) => {
       const movies = data.results;
-      const main = document.querySelector(".main");
+      const main = document.querySelector(".home-screen");
       const slider = document.createElement("div");
       slider.classList.add("slider");
       console.log(movies);
@@ -35,10 +35,23 @@ const dropdownMenu = document.querySelector(".dropdown-content");
 dropdown.addEventListener("click", () => {
   dropdownMenu.classList.toggle("show");
 });
+const username = document.querySelector("#username");
+const login = document.querySelector("#login");
+login.addEventListener("click", () => {
+  const loginScreen = document.querySelector(".login-screen");
+  const homeScreen = document.querySelector(".home-screen");
+  const name = document.querySelector("#name");
+  if (username.value === "") {
+    return;
+  }
+  name.textContent = "Hi, " + username.value;
+  loginScreen.classList.toggle("active");
+  homeScreen.classList.toggle("active");
+});
 
 getDiscover(28, "Popular Movies", "&sort_by=popularity.desc", 1);
 getDiscover(1, "Action Movies");
-getDiscover(66, "Horror Movies");
+getDiscover(5, "Horror Movies");
 getDiscover(19, "Biography Movies");
 getDiscover(18, "Best Dramas");
 getDiscover(35, "Comedy Movies");
